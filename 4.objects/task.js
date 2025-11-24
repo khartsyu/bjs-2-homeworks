@@ -37,3 +37,5 @@ Student.prototype.exclude = function (reason) {
   delete this.subject
   this.excluded = reason;
 }
+
+
