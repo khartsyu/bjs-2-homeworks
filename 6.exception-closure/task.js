@@ -25,7 +25,6 @@ class Triangle {
     this.a = a;
     this.b = b;
     this.c = c;
-    this.p = 0.5 * (a + b + c);
   }
 
   get perimeter() {
@@ -33,7 +32,8 @@ class Triangle {
   }
 
   get area() {
-    return parseFloat(Math.sqrt(this.p * (this.p - this.a) * (this.p - this.b) * (this.p - this.c)).toFixed(3));
+    let p = this.perimeter / 2;
+    return parseFloat(Math.sqrt(p * (p - this.a) * (p - this.b) * (p - this.c)).toFixed(3));
   }
 }
 
